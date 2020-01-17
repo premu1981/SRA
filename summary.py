@@ -33,7 +33,7 @@ print(len(cdf))
 
 
 analysis=pd.pivot_table(cdf,values='Final_score',index=["GMP_Area"],aggfunc=np.mean)
-##,margins=True,margins_name="Average GMP Area Score")
+
 analysis.sort_index(axis=1,ascending=False,inplace=True)# sort column name alphabetically
 
 with pd.ExcelWriter("SRA_final.xlsx") as writer:
